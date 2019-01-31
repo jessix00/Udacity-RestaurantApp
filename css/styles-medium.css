@@ -1,0 +1,54 @@
+/* ====================== Navigation ====================== */
+
+nav {
+    padding: 10px 0;
+}
+
+
+/* ====================== Map ====================== */
+
+#map {
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* ====================== Restaurant Filtering ====================== */
+
+.filter-options {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.filter-options h2 {
+    padding: 10px;
+}
+
+
+/* ====================== Restaurant Listing ====================== */
+
+#restaurants-list {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#restaurants-list li {
+    min-width: 270px;
+}
+
+#restaurants-list .restaurant-img {
+    background-color: #ccc;
+    display: inline;
+    margin: 0;
+    width: 270px;
+    height: auto;
+}
