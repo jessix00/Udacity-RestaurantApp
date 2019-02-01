@@ -1,0 +1,89 @@
+/* ====================== Navigation ====================== */
+
+#breadcrumb {
+    width: 100%;
+}
+
+#breadcrumb li {
+    font-size: 15pt;
+}
+
+
+/* ====================== Map ====================== */
+
+.inside #map-container {
+    background: blue none repeat scroll 0 0;
+    height: 75%;
+    width: 45%;
+    position: fixed;
+    right: 0;
+    top: 135px;
+    margin-right: 3%;
+    /* margin-top: 20px; */
+}
+
+.inside #map {
+    background-color: #ccc;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* ====================== Restaurant Details ====================== */
+
+#restaurant-container,
+#reviews-container {
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #fff;
+    margin-left: 20px;
+    padding: 0;
+    width: 50%;
+}
+
+#reviews-container {
+    width: 50%;
+    margin: 0;
+    padding-left: 4px;
+}
+
+#reviews-container h2 {
+    margin-left: 20px;
+}
+
+#restaurant-name {
+    font-size: 20pt;
+    margin: 150px 0 0 20px;
+    padding: 0;
+}
+
+#restaurant-img {
+    width: 90%;
+    margin-top: 20px;
+    margin: 20px 0 0 20px
+}
+
+#restaurant-cuisine {
+    background-color: #333;
+    margin: 2px 0 20px 20px;
+    width: 90%;
+}
+
+#restaurant-address {
+    margin: 10px 0px 10px 20px;
+}
+
+#restaurant-hours {
+    padding-left: 20px;
+}
+
+#reviews-list {
+    margin: 0 0 80px 0;
+    padding: 0;
+}
+
+.inside #footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    display: block;
+}
