@@ -2,7 +2,7 @@
 console.log('service worker registered');
 
 //variable stores all of the files we want to cache
-const cacheFiles = [
+const files = [
     '/',
     '/index.html',
     '/restaurant.html',
@@ -28,7 +28,7 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         //open caches object and add cacheFiles
         caches.open('cacheOne').then(function(cache) {
-            return cache.addAll(cacheFiles);
+            return cache.addAll(files);
         })
     );
 
@@ -39,7 +39,7 @@ self.addEventListener('fetch', function(event) {
         //determine if the event request url already exists 
         caches.match(event.request).then(function(response) {
             //if true return existing cache
-            if (response) { return response }
+            if (response) { return response; }
             //if request does not exist, fetch item like normal
             else {
                 return fetch(event.request)
@@ -47,14 +47,14 @@ self.addEventListener('fetch', function(event) {
                         const clonedResponse = response.clone();
                         caches.open('cacheOne').then(function(cache) {
                                 //pair the request with response
-                                cache.put(e.request, clonedResponse);
+                                cache.put(event.request, clonedResponse);
                             })
                             //this returns the response back to the fetch
                         return response;
                     })
                     //logs errors
                     .catch(function(err) {
-                        console.log(err);
+                        console.error(err);
                     });
             }
         })
